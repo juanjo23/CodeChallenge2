@@ -5,12 +5,7 @@ function sum (x, y) {
 
 //Substarction
 function substraction (x, y) {
-	if (x - y >= 0){
-		return x - y;
-	} else {
-		return "Error";
-	}
-
+	return x - y;
 }
 
 //Multiplication
@@ -20,8 +15,5 @@ function multiplication (x, y) {
 
 //Division
 function division (x, y) {
-	if(y == 0)
-		return 'Error, cannot divide by zero';
-
 	return x / y;
 }

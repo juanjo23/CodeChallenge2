@@ -14,6 +14,19 @@ And run the command:
 gulp default
 ```
 
-Screen:
+Tests:
 
-![screen](screen.png)
+```
+karma start karma.conf.js
+```
+
+Screens:
+
+![screen_gulp](screens/screen_gulp.png)
+
+
+
+![screen_karma](screens/screen_karma.png)
+
+
+

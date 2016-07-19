@@ -12,7 +12,7 @@ describe('calculator', function () {
 		});
 
 		it('Should return "Error" if negative value', function (){
-			expect(substraction(2,4)).toEqual('Error');
+			expect(substraction(2,4).toEqual('Error'));
 		});
 	});
 

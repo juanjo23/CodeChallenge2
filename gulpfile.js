@@ -13,7 +13,7 @@ var reload      = browserSync.reload;
 
 // Lint Task
 gulp.task('lint', function() {
-    return gulp.src('js/*.js')
+    return gulp.src('app/scripts/*.js')
         .pipe(jshint())
         .pipe(jshint.reporter('default'));
 });
@@ -23,12 +23,12 @@ gulp.task('less', function() {
     return gulp
         .src('app/styles/*.less')
         .pipe(less())
-        .pipe(gulp.dest('.tmp'));
+        .pipe(gulp.dest('dist'));
 });
 
 // Concatenate & Minify JS
 gulp.task('scripts', function() {
-    return gulp.src('js/*.js')
+    return gulp.src('app/scripts/*.js')
         .pipe(concat('all.js'))
         .pipe(gulp.dest('dist'))
         .pipe(rename('all.min.js'))
@@ -38,7 +38,7 @@ gulp.task('scripts', function() {
 
 // Watch Files For Changes
 gulp.task('watch', function() {
-    gulp.watch('js/*.js', ['lint', 'scripts']);
+    gulp.watch('app/scripts/*.js', ['lint', 'scripts']);
     gulp.watch('app/styles/*.less', ['less']);
 });
 
@@ -50,10 +50,10 @@ gulp.task('serve', function () {
       notify: false,
       port: 9000,
       server: {
-        baseDir: ['.tmp', 'app'],
+        baseDir: ['dist', 'app'],
         routes: {
           '/bower_components': 'bower_components',
-          '/.tmp': '.tmp'
+          '/dist': 'dist'
         }
       }
     });
@@ -61,7 +61,7 @@ gulp.task('serve', function () {
     // Livereload
     gulp.watch([
       'app/*.html',
-      '.tmp/*.css'
+      'dist/*.css'
     ]).on('change', reload);
 
 });
