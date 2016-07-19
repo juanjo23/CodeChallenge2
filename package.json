@@ -1,0 +1,36 @@
+{
+  "name": "code_challenge2",
+  "version": "1.0.0",
+  "description": "DON'T PUSH TO THE MASTER",
+  "main": "gulpfile.js",
+  "directories": {
+    "test": "test"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/juanjo23/CodeChallenge2.git"
+  },
+  "author": "Juan José Miramontes Sandoval",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/juanjo23/CodeChallenge2/issues"
+  },
+  "homepage": "https://github.com/juanjo23/CodeChallenge2#readme",
+  "dependencies": {
+    "jasmine": "^2.4.1",
+    "karma": "^1.1.1"
+  },
+  "devDependencies": {
+    "gulp": "^3.9.1",
+    "gulp-concat": "^2.6.0",
+    "gulp-jshint": "^2.0.1",
+    "gulp-livereload": "^3.8.1",
+    "gulp-rename": "^1.2.2",
+    "gulp-server-livereload": "^1.8.1",
+    "gulp-uglify": "^1.5.4",
+    "jshint": "^2.9.2"
+  }
+}

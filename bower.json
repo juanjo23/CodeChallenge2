@@ -1,0 +1,17 @@
+{
+  "name": "code_challenge2",
+  "description": "DON'T PUSH TO THE MASTER",
+  "main": "gulpfile.js",
+  "authors": [
+    "Juan José Miramontes Sandoval"
+  ],
+  "license": "ISC",
+  "homepage": "https://github.com/juanjo23/CodeChallenge2",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ]
+}
