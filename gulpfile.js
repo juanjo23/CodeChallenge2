@@ -6,8 +6,8 @@ var jshint = require('gulp-jshint');
 var concat = require('gulp-concat');
 var uglify = require('gulp-uglify');
 var rename = require('gulp-rename');
-var server = require('gulp-server-livereload');
-
+var browserSync = require('browser-sync').create();
+var reload      = browserSync.reload;
 
 // Lint Task
 gulp.task('lint', function() {
@@ -37,15 +37,22 @@ gulp.task('watch', function() {
     gulp.watch('scss/*.scss', ['sass']);
 });
 
-// Livereload
-gulp.task('webserver', function() {
-  gulp.src('app')
-    .pipe(server({
-      livereload: true,
-      directoryListing: true,
-      open: true
-    }));
+// Create server
+gulp.task('serve', function () {
+    // Serve files from the root of this project
+    browserSync.init({
+      notify: false,
+      port: 9000,
+      server: {
+        baseDir: ['.tmp', 'app'],
+        routes: {
+          '/bower_components': 'bower_components'
+        }
+      }
+    });
+
+    gulp.watch("*.html").on("change", reload);
 });
 
 // Default Task
-gulp.task('default', ['lint', 'less', 'scripts', 'watch', 'webserver']);
+gulp.task('default', ['lint', 'less', 'scripts', /* 'watch',*/ 'serve']);
