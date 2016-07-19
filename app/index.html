@@ -16,55 +16,101 @@
     <!-- endbuild -->
 
     <!-- build:css styles/main.css -->
-    <link rel="stylesheet" href="styles/main.css">
+    <link rel="stylesheet" href=".tmp/main.css">
     <!-- endbuild -->
 
   </head>
   <body>
-    <!--[if lt IE 10]>
-      <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
-    <![endif]-->
-
-    <div class="container">
-      <div class="header">
-        <ul class="nav nav-pills pull-right">
-          <li class="active"><a href="#">Home</a></li>
-          <li><a href="#">About</a></li>
-          <li><a href="#">Contact</a></li>
-        </ul>
-        <h3 class="text-muted">web app</h3>
-      </div>
-
-      <div class="jumbotron">
-        <h1>'Sugar, 'Allo!</h1>
-        <p class="lead">Always a pleasure scaffolding your apps.</p>
-        <p><a class="btn btn-lg btn-success" href="#">Splendid!</a></p>
-      </div>
-
-      <div class="row marketing">
-        <div class="col-lg-6">
-          <h4>HTML5 Boilerplate</h4>
-          <p>HTML5 Boilerplate is a professional front-end template for building fast, robust, and adaptable web apps or sites.</p>
-
-          <h4>Bootstrap</h4>
-          <p>Sleek, intuitive, and powerful mobile first front-end framework for faster and easier web development.</p>
+    <div class="container-fluid">
+      <div class="row description-header">
+        <div class="col-md-12 text-center">
+          <div class="go-back">
+            <i class="fa fa-chevron-left" aria-hidden="true"></i>
+          </div>
+          Description Hola
         </div>
       </div>
-
-      <div class="footer">
-        <p>♥ from the Yeoman team</p>
+      <div class="row description-section">
+        <div class="pokemon-image">
+          <img src="images/bulbasaur.png" alt="bulbasaur image" width="130" height="130">
+        </div>
+        <div class="description">
+          <div class="desc-title">
+            #001 Bulbasaur
+            <div class="icons">
+              <img src="images/pokeball.png" width="16">
+              <img src="images/star.png" width="16" >
+            </div>
+          </div>
+          <p>0.7m, 6.9kg</p>
+          <p>
+            Bulbasaur can be seen napping in bright sunlight. There is a seed on its back. By soaking up the sun's rays, the seed grows progressively larger.
+          </p>
+          <span class="tag grass">Grass</span>
+          <span class="tag poison">Poison</span>
+          <span class="tag bug">Bug</span>
+        </div>
+      </div>
+      <div class="row information">
+        <div class="info-title">
+          General Information
+        </div>
+        <div>
+          <table class="table">
+            <tr><td><b>Hidden Abilities</b></td> <td>Clorophyll</td></tr>
+            <tr><td><b>Location</b></td> <td>Lumiose City</td></tr>
+          </table>
+        </div>
+      </div>
+      <div class="row information">
+        <div class="info-title">
+          Evolution
+        </div>
+        <div class="evolution">
+          <div class="evolution-number">#001</div>
+          <div class="evolution-image">
+            <img src="images/bulbasaur.png" alt="bulbasaur image" width="90" height="70">
+          </div>
+          <div class="evolution-info">
+            <div class="evolution-desc">
+              <span class="evolution-name" >Bulbasaur</span>
+              <span class="tag grass">Grass</span>
+              <span class="tag poison">Poison</span>
+              <span class="tag bug">Bug</span>
+            </div>
+          </div>
+        </div>
+        <div class="evolution">
+          <div class="evolution-number">#002</div>
+          <div class="evolution-image">
+            <img src="images/ivysaur.png" alt="Ivysaur image" width="90" height="70">
+          </div>
+          <div class="evolution-info">
+            <div class="evolution-desc">
+              <span class="evolution-name" >Ivysaur <span class="evolution-level">LV.16</span> </span>
+              <span class="tag grass">Grass</span>
+              <span class="tag poison">Poison</span>
+              <span class="tag bug">Bug</span>
+            </div>
+          </div>
+        </div>
+        <div class="evolution">
+          <div class="evolution-number">#003</div>
+          <div class="evolution-image">
+            <img src="images/venusaur.png" alt="bulbasaur image" width="90" height="70">
+          </div>
+          <div class="evolution-info">
+            <div class="evolution-desc">
+              <span class="evolution-name" >Bulbasaur <span class="evolution-level">LV.32</span> </span>
+              <span class="tag grass">Grass</span>
+              <span class="tag poison">Poison</span>
+              <span class="tag bug">Bug</span>
+            </div>
+          </div>
+        </div>
       </div>
     </div>
 
-    <!-- Google Analytics: change UA-XXXXX-X to be your site's ID. -->
-    <script>
-      (function(b,o,i,l,e,r){b.GoogleAnalyticsObject=l;b[l]||(b[l]=
-      function(){(b[l].q=b[l].q||[]).push(arguments)});b[l].l=+new Date;
-      e=o.createElement(i);r=o.getElementsByTagName(i)[0];
-      e.src='https://www.google-analytics.com/analytics.js';
-      r.parentNode.insertBefore(e,r)}(window,document,'script','ga'));
-      ga('create','UA-XXXXX-X');ga('send','pageview');
-    </script>
 
     <!-- build:js scripts/vendor.js -->
     <!-- bower:js -->

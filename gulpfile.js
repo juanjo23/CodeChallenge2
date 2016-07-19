@@ -3,9 +3,11 @@ var gulp = require('gulp');
 
 // Include Our Plugins
 var jshint = require('gulp-jshint');
+var less = require('gulp-less');
 var concat = require('gulp-concat');
 var uglify = require('gulp-uglify');
 var rename = require('gulp-rename');
+var path = require('path');
 var browserSync = require('browser-sync').create();
 var reload      = browserSync.reload;
 
@@ -18,7 +20,10 @@ gulp.task('lint', function() {
 
 // Lint Less
 gulp.task('less', function() {
-    console.log("Pending... Less")
+    return gulp
+        .src('app/styles/*.less')
+        .pipe(less())
+        .pipe(gulp.dest('.tmp'));
 });
 
 // Concatenate & Minify JS
@@ -34,8 +39,9 @@ gulp.task('scripts', function() {
 // Watch Files For Changes
 gulp.task('watch', function() {
     gulp.watch('js/*.js', ['lint', 'scripts']);
-    gulp.watch('scss/*.scss', ['sass']);
+    gulp.watch('app/styles/*.less', ['less']);
 });
+
 
 // Create server
 gulp.task('serve', function () {
@@ -46,13 +52,21 @@ gulp.task('serve', function () {
       server: {
         baseDir: ['.tmp', 'app'],
         routes: {
-          '/bower_components': 'bower_components'
+          '/bower_components': 'bower_components',
+          '/.tmp': '.tmp'
         }
       }
     });
 
-    gulp.watch("*.html").on("change", reload);
+    // Livereload
+    gulp.watch([
+      'app/*.html',
+      '.tmp/*.css'
+    ]).on('change', reload);
+
 });
 
 // Default Task
-gulp.task('default', ['lint', 'less', 'scripts', /* 'watch',*/ 'serve']);
+gulp.task('default', ['lint', 'less', 'scripts', 'watch', 'serve']);
+// Run == default
+gulp.task('run', ['lint', 'less', 'scripts', 'watch', 'serve']);

@@ -1,0 +1,141 @@
+@primary-color-pink: #E91E63;
+@primary-color-pink-dark: #C2185B;
+@primary-color-gray: #949494;
+@color-grass: #97D077;
+@color-poison: #A680B8;
+@color-bug: #67AB9F;
+@font-size-base: 16px;
+
+body{
+	font-family: 'Helvetica', sans-serif;
+}
+
+.description-header{
+	background: @primary-color-pink;
+	color:white;
+	font-size: 18px;
+	padding: 10px;
+	font-weight: bold;
+	.go-back{
+		position: absolute;
+		top: -10px;
+		left: -10px;
+		padding: 10px 20px;
+		cursor: pointer;
+		&:hover {
+			background-color: @primary-color-pink-dark;
+		}
+	}
+}
+
+.description-section{
+	.pokemon-image{
+		width: 40%;
+		float: left;
+		text-align: center;
+		margin-top: 20px;
+	}
+	.description{
+		width: 60%;
+		float:left;
+		color: @primary-color-gray;
+		padding: 5px;
+		.desc-title{
+			font-size: 18px;
+			margin-top: 10px;
+			color: @primary-color-pink;
+			font-weight: bold;
+			position: relative;
+			.icons{
+				position: absolute;
+				top:0;
+				right:10px;
+			}
+		}
+	}
+}
+
+
+.tag{
+	display: inline-block;
+	width: 60px;
+	text-align: center;
+	color:white;
+	font-size: 12px;
+	border-radius: 5px;
+	&.grass{
+		background-color: @color-grass;
+	}
+	&.poison{
+		background-color: @color-poison;
+	}
+	&.bug{
+		background-color: @color-bug;
+	}
+}
+
+.information{
+	.info-title{
+		background: @primary-color-gray;
+		color:white;
+		font-size: 18px;
+		padding: 10px;
+		font-weight: bold;
+	}
+	.table{
+		color:@primary-color-gray;
+		font-size: @font-size-base;
+		margin-bottom: 0px;
+		td{
+			padding-left: 20px !important;
+		}
+	}
+	.evolution{
+		border-bottom: 1px solid #ddd;
+		position: relative;
+		&:after{
+			content: '';
+			display: block;
+			clear: both;
+		}
+		.evolution-number{
+			position: absolute;
+			top: 10px;
+			right: 15px;
+			font-size: 12px;
+			color: @primary-color-gray;
+		}
+		.evolution-image{
+			width: 30%;
+			float: left;
+			text-align: center;
+			img{
+				border: 1px solid #999999;
+				padding: 3px 10px;
+				margin: 10px;
+			}
+		}
+		.evolution-info{
+			width: 70%;
+			float:left;
+			.evolution-desc{
+				padding: 10px;
+				.evolution-name{
+					font-size: 16px;
+					display: block;
+					font-weight: bold;
+					margin-bottom: 5px;
+					margin-top:5px;
+					position: relative;
+					.evolution-level{
+						font-weight: normal;
+						color: @primary-color-gray;
+						font-size: @font-size-base - 2px;
+						position: absolute;
+						left: 90px;
+					}
+				}
+			}
+		}
+	}
+}

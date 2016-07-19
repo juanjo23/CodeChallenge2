@@ -1,0 +1,124 @@
+body {
+  font-family: 'Helvetica', sans-serif;
+}
+.description-header {
+  background: #e91e63;
+  color: white;
+  font-size: 18px;
+  padding: 10px;
+  font-weight: bold;
+}
+.description-header .go-back {
+  position: absolute;
+  top: -10px;
+  left: -10px;
+  padding: 10px 20px;
+  cursor: pointer;
+}
+.description-header .go-back:hover {
+  background-color: #c2185b;
+}
+.description-section .pokemon-image {
+  width: 40%;
+  float: left;
+  text-align: center;
+  margin-top: 20px;
+}
+.description-section .description {
+  width: 60%;
+  float: left;
+  color: #949494;
+  padding: 5px;
+}
+.description-section .description .desc-title {
+  font-size: 18px;
+  margin-top: 10px;
+  color: #e91e63;
+  font-weight: bold;
+  position: relative;
+}
+.description-section .description .desc-title .icons {
+  position: absolute;
+  top: 0;
+  right: 10px;
+}
+.tag {
+  display: inline-block;
+  width: 60px;
+  text-align: center;
+  color: white;
+  font-size: 12px;
+  border-radius: 5px;
+}
+.tag.grass {
+  background-color: #97d077;
+}
+.tag.poison {
+  background-color: #a680b8;
+}
+.tag.bug {
+  background-color: #67ab9f;
+}
+.information .info-title {
+  background: #949494;
+  color: white;
+  font-size: 18px;
+  padding: 10px;
+  font-weight: bold;
+}
+.information .table {
+  color: #949494;
+  font-size: 16px;
+  margin-bottom: 0px;
+}
+.information .table td {
+  padding-left: 20px !important;
+}
+.information .evolution {
+  border-bottom: 1px solid #ddd;
+  position: relative;
+}
+.information .evolution:after {
+  content: '';
+  display: block;
+  clear: both;
+}
+.information .evolution .evolution-number {
+  position: absolute;
+  top: 10px;
+  right: 15px;
+  font-size: 12px;
+  color: #949494;
+}
+.information .evolution .evolution-image {
+  width: 30%;
+  float: left;
+  text-align: center;
+}
+.information .evolution .evolution-image img {
+  border: 1px solid #999999;
+  padding: 3px 10px;
+  margin: 10px;
+}
+.information .evolution .evolution-info {
+  width: 70%;
+  float: left;
+}
+.information .evolution .evolution-info .evolution-desc {
+  padding: 10px;
+}
+.information .evolution .evolution-info .evolution-desc .evolution-name {
+  font-size: 16px;
+  display: block;
+  font-weight: bold;
+  margin-bottom: 5px;
+  margin-top: 5px;
+  position: relative;
+}
+.information .evolution .evolution-info .evolution-desc .evolution-name .evolution-level {
+  font-weight: normal;
+  color: #949494;
+  font-size: 14px;
+  position: absolute;
+  left: 90px;
+}
